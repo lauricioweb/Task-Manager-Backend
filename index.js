@@ -8,6 +8,9 @@ const corsOptions = {
 	origin: "http://localhost:5173", // A origem que você deseja permitir
 };
 
+require("./src/database/models/tasks");
+require("./src/database/models/subtasks");
+
 app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: true }));
